@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="meteo <= 0.5\ngini = 0.498\nsamples = 17\nvalue = [9, 8]\nclass = Não", fillcolor="#fcf1e9"] ;
+1 [label="tipo_dia <= 0.5\ngini = 0.375\nsamples = 8\nvalue = [6, 2]\nclass = Não", fillcolor="#eeab7b"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 4\nvalue = [4, 0]\nclass = Não", fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label="tipo_encontro <= 0.5\ngini = 0.5\nsamples = 4\nvalue = [2, 2]\nclass = Não", fillcolor="#ffffff"] ;
+1 -> 3 ;
+4 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = Não", fillcolor="#e58139"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2]\nclass = Sim", fillcolor="#399de5"] ;
+3 -> 5 ;
+6 [label="tipo_encontro <= 0.5\ngini = 0.444\nsamples = 9\nvalue = [3, 6]\nclass = Sim", fillcolor="#9ccef2"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="tipo_dia <= 0.5\ngini = 0.32\nsamples = 5\nvalue = [1, 4]\nclass = Sim", fillcolor="#6ab6ec"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = Sim", fillcolor="#399de5"] ;
+7 -> 8 ;
+9 [label="tv <= 0.5\ngini = 0.5\nsamples = 2\nvalue = [1, 1]\nclass = Não", fillcolor="#ffffff"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = Sim", fillcolor="#399de5"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = Não", fillcolor="#e58139"] ;
+9 -> 11 ;
+12 [label="tipo_dia <= 0.5\ngini = 0.5\nsamples = 4\nvalue = [2, 2]\nclass = Não", fillcolor="#ffffff"] ;
+6 -> 12 ;
+13 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = Não", fillcolor="#e58139"] ;
+12 -> 13 ;
+14 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2]\nclass = Sim", fillcolor="#399de5"] ;
+12 -> 14 ;
+}
